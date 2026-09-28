@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f103f;
+  font-family: dana;
+}
+:root {
+  --main-white: #fff;
+  --light-purple: #c961de;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+/*------------Header------------*/
+
+.navgation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.navgation > ul {
+  display: flex;
+  gap: 2.5rem;
+}
+.navgation li a {
+  color: var(--main-white);
+}
+
+.navgation ul li:first-child a {
+  color: var(--light-purple);
+  border-bottom: 1px solid var(--light-purple);
+}
+
+.dark-mode__btn {
+  position: relative;
+  width: 65px;
+  height: 32px;
+
+  border: none;
+  border-radius: 50px;
+
+  background-color: #25265c;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8px;
+
+  box-shadow: 0 0 10px rgba(201, 97, 222, 0.3);
+
+  transition: all 0.3s ease;
+}
+
+/* Sun & Moon */
+
+.dark-mode__btn .sun,
+.dark-mode__btn .moon {
+  font-size: 17px;
+  z-index: 2;
+  line-height: 1;
+}
+
+.dark-mode__btn .sun {
+  color: #ffd45c;
+}
+
+.dark-mode__btn .moon {
+  color: #ffffff;
+}
+
+/* Circle */
+
+.toggle-circle {
+  position: absolute;
+
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+
+  background-color: #ffffff;
+
+  right: 3px;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover */
+
+.dark-mode__btn:hover {
+  box-shadow: 0 0 15px rgba(201, 97, 222, 0.6);
+}
+
+/* Sidebar & Hamb menu*/
+
+.side-bar {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--main-white);
+}
+
+.side-bar ul li a {
+  display: flex;
+  color: #0f103f;
+  line-height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.hamb-menu {
+  display: none;
+  color: var(--main-white);
+  font-size: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.close {
+  display: none;
+}
+.navgation input {
+  display: none;
+}

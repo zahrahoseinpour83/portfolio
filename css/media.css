@@ -1,0 +1,31 @@
+@media (max-width: 1157px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .navgation > ul {
+    display: none;
+  }
+
+  .hamb-menu {
+    display: flex;
+  }
+
+  .hamb-menu.close {
+    display: none;
+  }
+
+  #menu:checked ~ .hamb-menu {
+    display: none;
+  }
+
+  #menu:checked ~ .hamb-menu.close {
+    display: flex;
+  }
+
+  #menu:checked ~ .side-bar {
+    display: block;
+  }
+}
